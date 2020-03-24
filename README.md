@@ -24,7 +24,7 @@ $this->password = "Smsalert password";
 $this->senderID = "Smsalert senderid";
 
 ### Now, in your controller function, where you wish to send an SMS/text message, add below code:
-	
+
 //send single sms
 if($this->smsalert->send("97xxxxxx23", "Welcome to SmsAlert!")) {
 /* SMS Sent */
