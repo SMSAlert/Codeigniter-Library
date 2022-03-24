@@ -9,37 +9,21 @@ Sms Alert Codeigniter Library for sending transactional/promotional SMS, through
 
 * password : SMS Alert current Password
 
-* mobileno : single or multiple mobile numbers (separated by comma)
-
-* text : Message Content to be sent
-
 * senderid : Receiver will see this as sender's ID(for demo account use DEMOOO)
 
 
 ## Usage
-change below variables in SMS Alert library:
+### Change below variables in SMS Alert library:
 
-  $this->username = "Smsalert username";  
-  $this->password = "Smsalert password";  
-  $this->senderID = "Smsalert senderid";  
+  $user = "Smsalert username";  
+  $pass = "Smsalert password";  
+  $senderid = "Smsalert senderid";  
 
 ### Now, in your controller function, where you wish to send an SMS/text message, add below code:
 
-  //send single sms  
-  if($this->smsalert->send("97xxxxxx23", "Welcome to SmsAlert!")) {  
-    
-  /* SMS Sent */  
-  }  
-  
-  //send multiple sms  
-  if($this->smsalert->send("97xxxxxx23, 97xxxxxx22", "Hi friends! Welcome to SmsAlert!")) {  
-  /* SMS Sent */  
-  }  
-  
-  //schedule sms  
-  if($this->smsalert->send("97xxxxxx23", "Hi! Happy Birthday!", "2019-09-03 23:59:59")) {  
-  /* SMS Scheduled */  
-  }  
+   $this->load->library('smsalert/smsalertlib'); 
+   
+   $this->smsalertlib->smssend($MOBILENO, $TEXT);  
     
 ## Support 
   Email :  support@cozyvision.com  
